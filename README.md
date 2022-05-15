@@ -1,160 +1,173 @@
-# Postman_HW8
-HW_2 Postman
-
+# Postman_HW_2
 
 http://162.55.220.72:5005/first
 1. Отправить запрос.   
-	`Выбираем метод Get.`  
-	`В URL копируем http://162.55.220.72:5005/first`     
+	`Выбираем метод` **Get**.  
+	`В` **UR**L копируем ***http://162.55.220.72:5005/first***     
 	`Сохраняем и посылаем запрос.`  
 	
-2. Статус код 200  
-	`Переходим во вкладку Tests.`    
-	`В меню справа выбираем Status code: Code is 200.`    
-	``` JSON pm.test("first Статус код 200", function () {  
-  	  pm.response.to.have.status(200);  
-	});```  
-	`В нижнем меню выбираем вкладку Test Results.`    
+2. Статус код 200.  
+	`Переходим во вкладку` **Tests**.      
+	`В меню справа выбираем` **Status code: Code is 200**.      
+	``` JS	 
+	pm.test("first Статус код 200", function () {  
+  	pm.response.to.have.status(200);    
+	});
+	```  
+	`В нижнем меню выбираем вкладку`  **Test Results**.      
 	`Сохраняем и посылаем запрос.`    
 	`Проверяем результат теста:`    
-	`PASS first Статус код 200`   
+	*PASS first Статус код 200*   
 
 3. Проверить, что в body приходит правильный string.  
-	`Во вкладке Body проверяем ответ сервера:`    
-	`This is the first responce from server!`    
+	`Во вкладке` **Body** `проверяем ответ сервера:`    
+	*This is the first responce from server!* 
 
+------------------------- 
 
-http://162.55.220.72:5005/user_info_3  
-1. Отправить запрос.  
-	`Выбираем метод Get.`  
-	`В URL копируем http://162.55.220.72:5005/user_info_3`
-	`Во вкладке Body ставим галочку form-data.`  
-	`Вносим необходимые Key и Value:`  
-	`name : Alex`  
-	`age: 32`  
-	`salary: 2000`  
+#### http://162.55.220.72:5005/user_info_3  
+4. Отправить запрос.  
+	`Выбираем метод` **Get**.    
+	`В` **URL** копируем ***http://162.55.220.72:5005/user_info_3***
+	`Во вкладке` **Body** `ставим галочку` **form-data**.  
+	`Вносим необходимые` **Key** `и` **Value**:  
+	*name : Alex*  
+	*age: 32*  
+	*salary: 2000*  
 	`Сохраняем и посылаем запрос.`  
 
-2. Статус код 200  
-	`Переходим во вкладку Tests.`    
-	`В меню справа выбираем Status code: Code is 200.`    
-	``` JSON pm.test("user_info_3 Статус код 200", function () {  
-  	  pm.response.to.have.status(200);  
-	});```  
+2. Статус код 200.  
+	`Переходим во вкладку` **Tests**.      
+	`В меню справа выбираем` **Status code: Code is 200.**    
+	``` JS 
+	pm.test("user_info_3 Статус код 200", function () {  
+  	pm.response.to.have.status(200);  
+	});
+	```  
 	`Сохраняем и посылаем запрос.`  
-	`В нижнем меню выбираем вкладку Test Results.`    
+	`В нижнем меню выбираем вкладку` **Test Results**.    
 	`Проверяем результат теста:`    
-	`PASS first Статус код 200`   
+	*PASS first Статус код 200*    
  
 3. Спарсить response body в json.  
-	`Переходим во вкладку Tests.`   
+	`Переходим во вкладку` **Tests**.  
 	`Из списка справа выбираеем:`  
-	`Response body: JSON value check`   
+	**Response body: JSON value check**  
 	`В окне редактирования тестов оставляем код:`   
-	```JSON  
-	 let jsonData = pm.response.json();`   
-	 console.log(jsonData); ```    
-	`Проверяем содержимое переменной, выводя ее в Console:`  	
-	`{age: "32", family: {…}, name: "Alex"…}`  
+	```JS  
+	let jsonData = pm.response.json();  
+	console.log(jsonData);
+	```    
+	`Проверяем содержимое переменной, выводя ее в` **Console**:    	
+	***{age: "32", family: {…}, name: "Alex"…}***  
 
-4. Проверить, что name в ответе равно name s request (name вбить руками.)
-	`Во вкладке Tests.`   
+4. Проверить, что name в ответе равно name s request (name вбить руками).  
+	`Во вкладке` **Tests**.   
 	`Из списка справа выбираеем:`  
-	`Response body: JSON value check`   
+	**Response body: JSON value check**     
 	`В окне редактирования тестов оставляем код:`   
-	```JSON  
+	```JS  
 	let ResponseData = pm.response.json();  
-	pm.test("name в ответе равен name в запросе", function () {  
-	pm.expect(ResponseData.name).to.eql("Alex");`  
-	});```  
-	`Сохраняем и посылаем запрос.`  
-	`Проверяем результат теста:` 
-	`PASS name в ответе равен name в запросе`  
+	pm.test("name в ответе равен name в запросе", function () {    
+	pm.expect(ResponseData.name).to.eql("Alex");   
+	});  
+	```   
+	`Сохраняем и посылаем запрос.`    
+	`Проверяем результат теста:`   
+	***PASS name в ответе равен name в запросе***  
  	
-5. Проверить, что age в ответе равно age s request (age вбить руками.)  
-	`Во вкладке Tests.`   
+5. Проверить, что age в ответе равно age s request (age вбить руками).  
+	`Во вкладке` **Tests**.   
 	`Из списка справа выбираеем:`  
-	`Response body: JSON value check`   
+	***Response body: JSON value check***   
 	`В окне редактирования тестов оставляем код:`   
-	```JSON  
+	```JS 
 	pm.test("age в ответе равен age в запросe", function () {  
 	pm.expect(ResponseData.age).to.eql("32");`  
-	});```  
+	});
+	```  
 	`Сохраняем и посылаем запрос.`  
-	`Проверяем результат теста:` 
-	`PASS age в ответе раве age в запросе`  
+	`Проверяем результат теста:`   
+	***PASS age в ответе раве age в запросе***  
 
-6. Проверить, что salary в ответе равно salary s request (salary вбить руками.)
-	`Во вкладке Tests.`   
-	`Из списка справа выбираеем:`  
-	`Response body: JSON value check`   
+6. Проверить, что salary в ответе равно salary s request (salary вбить руками).   
+	`Во вкладке` **Tests**.   
+	`Из списка справа выбираеем:`    
+	***Response body: JSON value check***     
 	`В окне редактирования тестов оставляем код:`   
-	```JSON  
+	```JS  
 	pm.test("salary в ответе раве salaty в запросe", function () {  
 	pm.expect(ResponseData.salary).to.eql(2000);`  
-	});```  
-	`Сохраняем и посылаем запрос.`  
-	`Проверяем результат теста:` 
-	`PASS salary в ответе равен salary в запросе`  
+	});
+	```  
+	`Сохраняем и посылаем запрос.`   
+	`Проверяем результат теста:`   
+	***PASS salary в ответе равен salary в запросе***  
 
 7. Спарсить request.
-	`Во вкладке Tests.`   
+	`Во вкладке` **Tests**.   
 	`В окне редактирования тестов оставляем код:`   
-	```JSON  
+	```JS  
 	let RequestData = request.data;  
-	console.log('request data:', RequestData)```  
-	`Сохраняем и посылаем запрос.` 		
-	`Проверяем содержимое переменной, выводя ее в Console:`  	
-	`request data: {name: "Alex", age: "32", salary: "2000"}`  
+	console.log('request data:', RequestData);
+	```  
+	`Сохраняем и посылаем запрос.`  
+	`Проверяем содержимое переменной, выводя ее в` **Console**:  
+	***request data: {name: "Alex", age: "32", salary: "2000"}***  
 	
 8. Проверить, что name в ответе равно name s request (name забрать из request.)  
-	`Во вкладке Tests.`   
+	`Во вкладке` **Tests**.   
 	`В окне редактирования тестов оставляем код:`   
-	```JSON  
-	pm.test("значения ключей name в ответе и в запросе совпадают", function () {  
-	pm.expect(ResponseData.name).to.eql(RequestData.name);  
-	});```  
-	`Сохраняем и посылаем запрос.` 		
-	`Проверяем результат теста:` 
-	`PASS значения ключей name в ответе и в запросе совпадают`  	
 
-9. Проверить, что age в ответе равно age s request (age забрать из request.)
-	`Во вкладке Tests.`   
+	```JS  
+	pm.test("значения ключей name в ответе и в запросе совпадают", function () {
+	pm.expect(ResponseData.name).to.eql(RequestData.name);  
+	});
+	```  
+	`Сохраняем и посылаем запрос.` 		
+	`Проверяем результат теста:`   
+	***PASS значения ключей name в ответе и в запросе совпадают***  	
+
+9. Проверить, что age в ответе равно age s request (age забрать из request).  
+	`Во вкладке` **Tests**.   
 	`В окне редактирования тестов оставляем код:`   
-	```JSON  
+	```JS  
 	pm.test("значения ключей age в ответе и в запросе совпадают", function () {
 	pm.expect(ResponseData.age).to.eql(RequestData.age);  
-	});```    
-	`Сохраняем и посылаем запрос.` 		
-	`Проверяем результат теста:` 
-	`PASS значения ключей age в ответе и в запросе совпадают`  
+	});
+	```    
+	`Сохраняем и посылаем запрос.`  
+	`Проверяем результат теста:`   
+	***PASS значения ключей age в ответе и в запросе совпадают***  
 
-10. Проверить, что salary в ответе равно salary s request (salary забрать из request.)  
-	`Во вкладке Tests.`   
+10. Проверить, что salary в ответе равно salary s request (salary забрать из request).  
+	`Во вкладке` **Tests**.     
 	`В окне редактирования тестов оставляем код:`   
-	```JSON   
+	```JS 
 	pm.test("значения ключей salary в ответе и в запросе совпадают", function () {  
 	pm.expect(ResponseData.salary).to.eql(+RequestData.salary);  
 	/* или  
 	pm.expect(ResponseData.salary).to.eql(Number(RequestData.salary)); */  
-	});```    
-	`Сохраняем и посылаем запрос.` 		
-	`Проверяем результат теста:` 
-	`PASS значения ключей age в ответе и в запросе совпадают`  
+	});
+	```    
+	`Сохраняем и посылаем запрос.`  
+	`Проверяем результат теста:`   
+	***PASS значения ключей age в ответе и в запросе совпадают***  
 
 11. Вывести в консоль параметр family из response.  
-	`Во вкладке Tests.`   
+	`Во вкладке` **Tests**.   
 	`В окне редактирования тестов оставляем код:`   
-	```JSON   
-	 console.log('Family:', ResponseData.family)```    
-	`Сохраняем и посылаем запрос.` 		
-	`Проверяем результат в Console:` 
-	`Family:`  
-	`{children: [2], u_salary_1_5_year: 8000}`  
-	`children: [2]`    
-	`u_salary_1_5_year: 8000`    
+	```JS   
+	console.log('Family:', ResponseData.family)
+	 ```    
+	`Сохраняем и посылаем запрос.`  
+	`Проверяем результат в` **Console**:  
+	***Family:    
+	{children: [2], u_salary_1_5_year: 8000}  
+	children: [2]  
+	u_salary_1_5_year: 8000***  
 	
-12. Проверить что u_salary_1_5_year в ответе равно salary*4 (salary забрать из request)
+12. Проверить что u_salary_1_5_year в ответе равно salary*4 (salary забрать из request).
 	`Во вкладке Tests.`   
 	`В окне редактирования тестов оставляем код:`   
 	```JSON   
@@ -165,6 +178,8 @@ http://162.55.220.72:5005/user_info_3
 	`Сохраняем и посылаем запрос.` 		
 	`Проверяем результат теста:` 
 	`PASS u_salary_1_5_year в ответе равно salary*4`  
+
+------------------------- 
 
 http://162.55.220.72:5005/object_info_3  
 1. Отправить запрос.  
@@ -295,6 +310,8 @@ http://162.55.220.72:5005/object_info_3
 	`Сохраняем и посылаем запрос.` 		
 	`Проверяем результат теста:` 
 	`PASS dog has a name` 
+
+------------------------- 
 
 http://162.55.220.72:5005/object_info_4  
 1. Отправить запрос.  
@@ -490,6 +507,7 @@ http://162.55.220.72:5005/object_info_4
 	`Elements of salary:`  
 	`6000`  
 
+------------------------- 
 
 http://162.55.220.72:5005/user_info_2
 1. Вставить параметр salary из окружения в request
