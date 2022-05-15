@@ -58,7 +58,7 @@ http://162.55.220.72:5005/first
 	let jsonData = pm.response.json();  
 	console.log(jsonData);
 	```    
-	`Проверяем содержимое переменной, выводя ее в` **Console**:    	
+	`Проверяем содержимое переменной, выводя ее в` **Console**:  
 	***{age: "32", family: {…}, name: "Alex"…}***  
 
 4. Проверить, что name в ответе равно name s request (name вбить руками).  
