@@ -58,7 +58,7 @@ http://162.55.220.72:5005/first
 	let jsonData = pm.response.json();  
 	console.log(jsonData);
 	```    
-	`Проверяем содержимое переменной, выводя ее в` **Console**:  
+	`Проверяем содержимое переменной, выводя ее в` **Console**:   
 	***{age: "32", family: {…}, name: "Alex"…}***  
 
 4. Проверить, что name в ответе равно name s request (name вбить руками).  
@@ -467,7 +467,7 @@ http://162.55.220.72:5005/object_info_4
 	`Проверяем результат теста:`  
 	***PASS salary element 1 equal salary * 2 request*** 
 
-14. Проверить, что 2-й элемент параметра salary равен salary*3 из request (salary забрать из request.)
+14. Проверить, что 2-й элемент параметра salary равен salary*3 из request (salary забрать из request.)  
 	`Во вкладке` **Tests**.   
 	`В окне редактирования тестов оставляем код:`   
 	```JS  
@@ -511,7 +511,7 @@ http://162.55.220.72:5005/object_info_4
 	```  
 	`Сохранить и передать запрос`  
 
-20. Передать в окружение переменную salary
+20. Передать в окружение переменную salary  
 	`В окне редактирования тестов оставляем код:`  
 	```JS 
 	pm.environment.set("salary", ResponseBody.salary);
