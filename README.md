@@ -465,7 +465,7 @@ http://162.55.220.72:5005/object_info_4
 	```  
 	`Сохраняем и посылаем запрос.`  
 	`Проверяем результат теста:`  
-	***PASS salary element 1 equal salary*2 request*** 
+	***PASS salary element 1 equal salary * 2 request*** 
 
 14. Проверить, что 2-й элемент параметра salary равен salary*3 из request (salary забрать из request.)
 	`Во вкладке` **Tests**.   
@@ -477,7 +477,7 @@ http://162.55.220.72:5005/object_info_4
 	```  
 	`Сохраняем и посылаем запрос.`  
 	`Проверяем результат теста:`  
-	***PASS salary element 2 equal salary*3 request*** 
+	***PASS salary element 2 equal salary * 3 request*** 
 
 15. Создать в окружении переменную name  
 	`Слева в меня выбирать` **Environment - New**  
