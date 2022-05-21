@@ -381,7 +381,7 @@ http://162.55.220.72:5005/object_info_4
 	`Проверяем содержимое переменной, выводя ее в` **Console**:  
 	***Request Data: {name: "Alex", age: "32", salary: "2000"}***     
  
-5. Проверить, что name в ответе равно name s request (name забрать из request.)  
+5. Проверить, что name в ответе равно name s request (name забрать из request.)    
 	`Во вкладке` **Tests**.   
 	`В окне редактирования тестов оставляем код:`   
 	```JS  
