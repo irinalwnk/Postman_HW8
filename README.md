@@ -587,8 +587,8 @@ http://162.55.220.72:5005/user_info_2
 	`Во вкладке` **Tests**.   
 	`В окне редактирования тестов оставляем код:`     
 	```JS  
-	let RequestData = pm.request.url.query.toObject();  
-	console.log('Request Data: ', RequestData);
+	let RequestData = request.data;  
+	console.log('request data:', RequestData);
 	```  
 	`Сохраняем и посылаем запрос.`  
 	`Проверяем содержимое переменной, выводя ее в` **Console**:  
