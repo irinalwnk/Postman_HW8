@@ -9,7 +9,7 @@ http://162.55.220.72:5005/first
 2. Статус код 200.  
 	`Переходим во вкладку` **Tests**.      
 	`В меню справа выбираем` **Status code: Code is 200**.      
-	``` JS	 
+	``` JS	   
 	pm.test("first Статус код 200", function () {  
   	pm.response.to.have.status(200);    
 	});
