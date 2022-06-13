@@ -27,7 +27,7 @@ http://162.55.220.72:5005/first
 	``` JS	 
 	pm.test("correct string", function () {  
 	pm.response.to.have.body("This is the first responce from server!");  
-	});  
+	});   
 	```  
 	`В нижнем меню выбираем вкладку`  **Test Results**.      
 	`Сохраняем и посылаем запрос.`    
